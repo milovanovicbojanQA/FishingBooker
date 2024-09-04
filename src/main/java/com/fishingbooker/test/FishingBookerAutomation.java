@@ -31,8 +31,9 @@ public class FishingBookerAutomation {
             captainPage.sendMessage("2024-09-10", "Looking forward to this trip!");
 
         } finally {
-            //driver.quit();
+            driver.quit();
         }
     }
 }
+
 

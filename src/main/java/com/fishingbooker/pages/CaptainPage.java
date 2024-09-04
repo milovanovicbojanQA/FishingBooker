@@ -48,6 +48,11 @@ public class CaptainPage {
         WebElement messageCaptainButton = driver.findElement(By.xpath(CaptainPageID.MESSAGE_CAPTAIN_BUTTON));
         messageCaptainButton.click();
 
+        WebElement groupSizeDropdown = driver.findElement(By.xpath(CaptainPageID.GROUP_SIZE_DROPDOWN));
+        groupSizeDropdown.click();
+        WebElement groupSizeOption = driver.findElement(By.xpath(CaptainPageID.GROUP_SIZE_OPTION_2));
+        groupSizeOption.click();
+
         WebElement messageDatePicker = driver.findElement(By.xpath(CaptainPageID.MESSAGE_DATE_PICKER));
         messageDatePicker.click();
 
@@ -69,6 +74,11 @@ public class CaptainPage {
                 throw new AssertionError("No available dates found in the next month.");
             }
         }
+
+        WebElement tripDropdown = driver.findElement(By.xpath(CaptainPageID.TRIP_SELECT_DROPDOWN));
+        tripDropdown.click();
+        List<WebElement> tripOptions = driver.findElements(By.xpath(CaptainPageID.TRIP_OPTIONS));
+        tripOptions.get(tripOptions.size() - 1).click();
 
         WebElement messageField = driver.findElement(By.xpath(CaptainPageID.MESSAGE_FIELD));
         messageField.sendKeys(message);
