@@ -28,7 +28,7 @@ public class FishingBookerAutomation {
 
             CaptainPage captainPage = new CaptainPage(driver);
             captainPage.selectFirstAnglersChoice();
-            captainPage.sendMessage("2024-09-10", "Looking forward to this trip!");
+            captainPage.sendMessage("Radujem se pecanju, Bojan");
 
         } finally {
             driver.quit();

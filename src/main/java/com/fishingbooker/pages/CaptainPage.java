@@ -44,7 +44,7 @@ public class CaptainPage {
         }
     }
 
-    public void sendMessage(String date, String message) {
+    public void sendMessage(String message) {
         WebElement messageCaptainButton = driver.findElement(By.xpath(CaptainPageID.MESSAGE_CAPTAIN_BUTTON));
         messageCaptainButton.click();
 
