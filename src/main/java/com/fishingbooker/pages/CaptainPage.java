@@ -53,10 +53,21 @@ public class CaptainPage {
 
         List<WebElement> availableDates = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
                 By.xpath(CaptainPageID.AVAILABLE_DATE)));
+
         if (!availableDates.isEmpty()) {
-            availableDates.get(0).click();
+            availableDates.get(availableDates.size() - 1).click();
         } else {
-            throw new AssertionError("No available dates found.");
+            WebElement nextMonthButton = driver.findElement(By.xpath(CaptainPageID.NEXT_MONTH_BUTTON));
+            nextMonthButton.click();
+
+            availableDates = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
+                    By.xpath(CaptainPageID.AVAILABLE_DATE)));
+
+            if (!availableDates.isEmpty()) {
+                availableDates.get(availableDates.size() - 1).click();
+            } else {
+                throw new AssertionError("No available dates found in the next month.");
+            }
         }
 
         WebElement messageField = driver.findElement(By.xpath(CaptainPageID.MESSAGE_FIELD));

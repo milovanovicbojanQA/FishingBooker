@@ -54,6 +54,9 @@ public class SearchPage {
     }
 
     private void selectGroupSize(int adults, int children) {
+        WebElement groupSizeDropdownButton = driver.findElement(By.xpath(SearchPageID.GROUP_SIZE_DROPDOWN_BUTTON));
+        groupSizeDropdownButton.click();
+        
         adjustGroupSize("adults", adults);
         adjustGroupSize("children", children);
     }

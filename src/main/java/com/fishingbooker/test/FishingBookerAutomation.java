@@ -18,10 +18,10 @@ public class FishingBookerAutomation {
             driver.get("https://qahiringtask.dev.fishingbooker.com//");
 
             LoginPage loginPage = new LoginPage(driver);
-            loginPage.login("bojantest@gmail.com", "bojantest1234!");
+            loginPage.login("bojantest@gmail.com", "bojantest123!");
 
             SearchPage searchPage = new SearchPage(driver);
-            searchPage.searchFishingTour("Fishing Destination", 2, 0);
+            searchPage.searchFishingTour("Florida", 4, 2);
 
             FilterPage filterPage = new FilterPage(driver);
             filterPage.applyFilters();
