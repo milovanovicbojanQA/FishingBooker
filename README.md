@@ -1,18 +1,5 @@
-## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Pozdrav,
+Ovde se nalazi task za automatizaciju, koristio sam Javu (selenijum jer je podrzava).
+Nisam stavljao komentare u kod iz razloga ako budem bio pozvan na sledeci krug intervjua, mogu sve da objasnim (nacin pisanja, logiku, objasnjenje koda…).
+Web QA mi je bio jako nestabilan i cesto sam dobijao error 500 i 400 (ako sam pokusao Sign In), takodje sam nekad mogao 2x da se ulogujem (ali je bilo teze za reprodukovati) sam test otvara stranicu I pokrece testate ali zbog te greske ne zavrsava. Mozete pogledati logiku i na koji nacin je napisan test. :)
